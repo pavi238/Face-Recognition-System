@@ -1,79 +1,194 @@
 # 🔍 VisionVault — Enterprise Face Recognition & Attendance System
 
-VisionVault is a full-stack, enterprise-grade **Face Recognition & Attendance Intelligence Platform** built with **FastAPI**, **OpenCV**, **SQLAlchemy**, and **React (Vite + Tailwind CSS)**.
+![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.100+-009688?logo=fastapi)
+![React](https://img.shields.io/badge/React-18-61DAFB?logo=react)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.x-38BDF8?logo=tailwindcss)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-![License](https://img.shields.io/badge/license-MIT-blue)
-![Python](https://img.shields.io/badge/Python-3.11-brightgreen)
-![React](https://img.shields.io/badge/React-18-61dafb)
-![FastAPI](https://img.shields.io/badge/FastAPI-0.100+-009688)
-
----
-
-## ✨ Features
-
-- 📸 **Real-Time Webcam Face Verification**: Instant identification via browser webcam stream with canvas bounding box rendering, confidence score, and audio chimes.
-- 🎯 **Multi-Angle Face Enrollment**: Guided 3-angle wizard (Frontal, Left Angle, Right Angle) to extract 128D facial feature vectors for high matching precision.
-- 🔐 **Authentication & Security**: Password login + Passwordless Face Login using JWT tokens and salted SHA-256 password hashing.
-- 📊 **Analytics Dashboard**: Interactive Recharts attendance trend bar chart, KPI cards, punctuality rate breakdown, and real-time audit feed.
-- 📋 **User & Attendance Management**: Searchable personnel directory, status badges (On Time, Late), date range pickers, and 1-click **CSV Report Export**.
-- 🛡️ **Security Audit Logs**: Complete log of all verification events, confidence scores, vector distances, and unknown face snapshots.
-- ⚙️ **System Parameters Tuning**: Adjustable vector matching distance threshold slider, workplace start time, audio chime toggle, and camera selector.
+VisionVault is an enterprise-grade **Face Recognition & Attendance Management System** designed to automate employee authentication and attendance tracking using AI-powered facial recognition. The platform combines a high-performance **FastAPI** backend with a modern **React** frontend to deliver secure authentication, real-time attendance monitoring, analytics, and administrative controls.
 
 ---
 
-## 🛠️ Tech Stack
+# ✨ Key Features
 
-### Backend
-- **Python 3.11** + **FastAPI**
-- **OpenCV** (Haar Cascade & Spatial Block Histogram 128D Embeddings)
-- **SQLAlchemy ORM** + **SQLite / PostgreSQL**
-- **JWT (python-jose)** authentication
+### 📸 AI Face Recognition
+- Real-time webcam face verification
+- Multi-angle face enrollment for improved accuracy
+- High-speed facial matching with confidence score
+- Unknown face detection and verification logging
 
-### Frontend
-- **React** (Vite)
-- **Tailwind CSS** (Dark / Light Mode)
-- **Lucide React Icons**
-- **Recharts** (Analytics visualization)
-- **Axios** HTTP client
+### 👤 Attendance Management
+- Automated attendance marking
+- Daily attendance history
+- Employee directory with search
+- Attendance status (On-Time / Late)
+- CSV attendance report export
+
+### 📊 Analytics Dashboard
+- Attendance trends visualization
+- Employee attendance statistics
+- KPI cards
+- Real-time activity logs
+- Interactive charts using Recharts
+
+### 🔐 Authentication & Security
+- JWT Authentication
+- Password & Face Login
+- SHA-256 Password Hashing
+- Secure API endpoints
+- Audit logs for all recognition events
+
+### ⚙️ Administration
+- User Management
+- Attendance Monitoring
+- Face Registration
+- Threshold Configuration
+- Camera & System Settings
 
 ---
 
-## 🚀 Quick Start Guide
+# 🛠 Technology Stack
 
-### 1. Clone Repository
+| Category | Technologies |
+|-----------|--------------|
+| **Frontend** | React, Vite, Tailwind CSS, Axios, Lucide React, Recharts |
+| **Backend** | Python, FastAPI |
+| **Database** | SQLite / PostgreSQL |
+| **ORM** | SQLAlchemy |
+| **Computer Vision** | OpenCV |
+| **Authentication** | JWT (python-jose) |
+| **Password Security** | SHA-256 |
+| **Development Tools** | Git, GitHub |
+
+---
+
+# 📂 Project Structure
+
+```text
+VisionVault/
+│
+├── backend/
+│   ├── main.py
+│   ├── routes/
+│   ├── models/
+│   ├── database/
+│   └── requirements.txt
+│
+├── frontend/
+│   ├── src/
+│   ├── public/
+│   ├── package.json
+│   └── vite.config.js
+│
+├── README.md
+└── LICENSE
+```
+
+---
+
+# 🚀 Installation & Setup
+
+## Clone Repository
+
 ```bash
 git clone https://github.com/pavi238/Face-Recognition-System.git
+
 cd Face-Recognition-System
 ```
 
-### 2. Backend Setup
+## Backend Setup
+
 ```bash
 cd backend
+
 python -m venv venv
-# Windows:
-.\venv\Scripts\activate
-# Linux/macOS:
-# source venv/bin/activate
+
+# Windows
+venv\Scripts\activate
+
+# Linux / macOS
+source venv/bin/activate
 
 pip install -r requirements.txt
-uvicorn main:app --host 0.0.0.0 --port 8000
+
+uvicorn main:app --reload
 ```
-
-### 3. Frontend Setup
-```bash
-cd frontend
-npm install
-npm run dev
-```
-
-Open `http://localhost:3000` in your browser.
-
-**Default Admin Credentials:**
-- **Email:** `admin@facerec.com`
-- **Password:** `admin123`
 
 ---
 
-## 📜 License
+## Frontend Setup
 
-Distributed under the MIT License.
+```bash
+cd frontend
+
+npm install
+
+npm run dev
+```
+
+Visit
+
+```
+http://localhost:3000
+```
+
+---
+
+# 🔑 Default Admin Login
+
+| Email | Password |
+|--------|----------|
+| admin@facerec.com | admin123 |
+
+---
+
+# 📌 Core Functionalities
+
+- AI-powered Face Recognition
+- Employee Registration
+- Face Enrollment
+- Attendance Tracking
+- Attendance Analytics
+- Secure Authentication
+- Admin Dashboard
+- Attendance Report Export
+- Activity Logs
+- User Management
+
+---
+
+# 🎓 Internship Details
+
+This project was developed as part of my **Python Programming Internship** at **Codtech IT Solutions Private Limited**. During this internship, I gained practical experience in developing enterprise-level full-stack applications by integrating backend APIs, frontend development, database management, authentication, and computer vision technologies.
+
+| Field | Details |
+|--------|---------|
+| **Organization** | Codtech IT Solutions Private Limited |
+| **Internship Domain** | Python Programming |
+| **Duration** | 4 Weeks |
+| **Internship Period** | 04 July 2026 – 01 August 2026 |
+| **Intern ID** | CITS6495 |
+
+### Technologies & Skills Applied
+
+- Python
+- FastAPI
+- React.js
+- Tailwind CSS
+- OpenCV
+- SQLAlchemy
+- SQLite / PostgreSQL
+- JWT Authentication
+- REST API Development
+- Face Recognition
+- Computer Vision
+- Database Design
+- Git & GitHub
+- Full-Stack Web Development
+
+---
+
+# 📄 License
+
+This project is licensed under the **MIT License** and is intended for educational and learning purposes.
